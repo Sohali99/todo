@@ -1,0 +1,8 @@
+.form-center{
+    display: flex;
+    justify-content: center;
+}
+.inputfield{
+    width: 420px;
+    height: 40px;
+}
