@@ -5,4 +5,32 @@
 .inputfield{
     width: 420px;
     height: 40px;
+    display: flex;
+    margin-left: 25%;
+    padding: 10px
+}
+.todolist{
+    width: 420px;
+    height: 40px;
+    background-color: rgb(180, 147, 107);
+    margin-left: 25%;
+}
+.todo-complete {
+    text-decoration: line-through;
+  }
+.inputfieldbtn{
+    width: 420px;
+    height: 40px;
+    margin-left: 25%;
+}
+.todobox{
+    width: 420px;
+    height: 40px;
+    display: flex;
+}
+.deleteItem{
+    background-color: transparent;
+    border: solid 1px rgb(105, 38, 38);
+    height: 35px;
+    margin-top: 2px;
 }

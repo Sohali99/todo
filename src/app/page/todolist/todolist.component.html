@@ -1,11 +1,17 @@
 <h1 class="form-center">what i want to do:</h1>
-<input type="text" #task placeholder="add new task....">
+<input class="inputfield" type="text" #task placeholder="add new task....">
 <br><br>
-<button (click)="addTask(task.value)">add task</button>
+<button class="inputfieldbtn" (click)="addTask(task.value)">add task</button>
 <br><br>
-<ul *ngFor="let i of list">
-  <li>{{i.name}}
-    <button (click)="deleteItem(i.id)">remove</button>
+<ul class="todolist" *ngFor="let i of list">
+  <li class="todobox">
+    <div style="width:70% ;padding: 10px">
+      <input class="todo-checkbox" (click)="completeItem()" type="checkbox"/>
+      <span class="todo-title" [ngClass]="{'todo-complete': isComplete}">
+        {{i.name}}
+      </span>
+    </div>
+    <button class="deleteItem" (click)="deleteItem(i.id)">remove</button>
   </li>
 </ul>
 

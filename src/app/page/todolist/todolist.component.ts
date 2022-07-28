@@ -9,7 +9,8 @@ import { FormGroup, FormBuilder, FormControl,Validators } from '@angular/forms';
 })
 export class TodolistComponent implements OnInit {
 
-  list:any[]=[]
+  list:any[]=[];
+  isComplete: boolean = false;
 
   constructor() { }
 
@@ -21,6 +22,9 @@ export class TodolistComponent implements OnInit {
       name:task
     });
     console.warn(this.list);
+  }
+  completeItem(){
+    this.isComplete = !this.isComplete;
   }
   deleteItem(id:number){
     this.list=this.list.filter(task=>task.id !== id);
